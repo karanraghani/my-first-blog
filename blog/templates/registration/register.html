@@ -1,0 +1,17 @@
+{% extends 'blog/base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+	{% if user.is_authenticated %}
+	<strong>You are already logged in as {{ user.username }}</strong>
+	<!--<a href="{}"></a>-->
+	{% else %}
+		<h1>Login</h1>
+		<br />
+		<form id="register" method="post" action="{% url 'register' %}">
+			{% csrf_token %}
+			{{ form.as_p }}
+			<input type="submit" name="submit" value="Register">
+		</form>
+	{% endif %}
+{% endblock %}
