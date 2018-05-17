@@ -17,14 +17,14 @@
             <a href="{% url 'login' %}" class="top-menu"><small>Login</small></a>
             <a href= "{% url 'register' %}" class="top-menu"><small>Register</small></a>
 			{% endif %}
-			<h1><a href="/">Django Blog</a></h1>
+			<h1><a class="page_title" href="/">Blog</a></h1>
 		</div>
 
 		
 
-		<div class="content container">
+		<div class="content container-fluid">
 		    <div class="row">
-		        <div class="col-md-8">
+		        <div class="col-md-4 col-md-offset-4">
 		        {% block content %}
 		        {% endblock %}
 		        </div>
